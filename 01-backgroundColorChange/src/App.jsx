@@ -31,6 +31,17 @@ function App() {
         className='outline-none px-4 py-1 rounded-full shadow-lg' style={{backgroundColor: "white"}}>White</button>
         <button onClick={()=> setColor("black")} 
         className='outline-none px-4 py-1 rounded-full shadow-lg' style={{backgroundColor: "black"}}>Black</button>
+
+           // or using map
+           {["red", "green", "blue", "yellow", "pink", "purple", "black", "white"].map((clr) => (
+            <button
+              key={clr}
+              className="outline-none px-4 py-1 rounded-full shadow-lg capitalize"
+              style={{ backgroundColor: clr }}
+              onClick={() => setColor(clr)}
+            >
+              {clr}
+            </button>
         </div>
       
       </div>
